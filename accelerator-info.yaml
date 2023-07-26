@@ -1,0 +1,24 @@
+id: f0de4396-b93a-4278-9f58-c156d81ad32f
+timestamp: 2023-07-26T17:37:14Z
+username: guest
+source: TAP-GUI
+accelerator:
+  name: tanzu-java-web-app
+  source:
+    image: 044007926392.dkr.ecr.us-east-1.amazonaws.com/tap-packages@sha256:0310128e62ade8150fbfa9fd82e826d98d4311a17b97ba5cb2bdab1ffc25d7d9
+fragments:
+  - name: java-version
+    source:
+      image: 044007926392.dkr.ecr.us-east-1.amazonaws.com/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: tap-workload
+    source:
+      image: 044007926392.dkr.ecr.us-east-1.amazonaws.com/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+  - name: build-wrapper-maven
+    source:
+      image: 044007926392.dkr.ecr.us-east-1.amazonaws.com/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+options:
+  includeBuildToolWrapper: true
+  javaVersion: 11
+  projectName: tanzu-java-web-app
+  repositoryPrefix: dev.local
+  updateBoot3: false
